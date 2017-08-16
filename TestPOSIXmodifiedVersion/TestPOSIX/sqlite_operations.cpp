@@ -16,19 +16,17 @@
 using namespace std;
 
 
-sqlite3 *db;
+sqlite3 *db; // create a pointer point to sqlite3 object?
 char *zErrMsg = 0;
 int rc;
 const char *sql;
 const char *debugsql;
 const char* data = "Callback function called";
 
-/*
- printf information we need to check.
- */
+/* this callback is being called in sqlite3_exec() function */
 int callback(void *data, int argc, char **argv, char **azColName){
     int i;
-    fprintf(stderr, "%s: ", (const char*)data);
+    fprintf(stderr, "%s: ", (const char*)data); // send "Callback function called" to standard error
     for(i=0; i<argc; i++){
         printf("%s = %s\n", azColName[i], argv[i] ? argv[i] : "NULL");
     }
@@ -47,6 +45,7 @@ void deleter (char* times) {
     sql = sqlinfo.c_str();
     printf("%s", sql);
     rc = sqlite3_exec(db, sqlhead.c_str(), callback, 0, &zErrMsg);
+    // &zErrMsg is used to obtain any error the sqlite3 generated
     if( rc != SQLITE_OK ){
         fprintf(stderr, "SQL error: %s\n %d", zErrMsg, rc);
         sqlite3_free(zErrMsg);
@@ -230,9 +229,7 @@ void insertNewAssignmenter(const char* lectures, const char* times, const char* 
     
 }
 
-/* 
- a new sqlite query for conenct with the swift code. 
- */
+// Addignment cpp is a class, the second assignmentcpp is a constructor->guess: it's initialize pkid, lecture, time, and position in class AssignmentCpp
 AssignmentCpp::AssignmentCpp(int pkid, string lecture, string time, string position): pkid(pkid), lecture(lecture), time(time), position(position) {}
 
 static long t_rowNum;
@@ -241,7 +238,7 @@ long rowNumberInAssignmentsTable() {
         t_rowNum++;
         return 0;
     }, NULL, NULL) == SQLITE_OK ? t_rowNum : -1;
-}
+} // 这个函数构造和前面我所创造的函数构造完全相同
 
 long rowNumberInNewAssignmentsTable() {
     return sqlite3_exec(db, "SELECT id FROM newusers", [](void *foo, int columnNum, char **columnTexts, char **columnNames){
@@ -257,15 +254,16 @@ long rowNumberInNewNewAssignmentsTable() {
         return 0;
     }, NULL, NULL) == SQLITE_OK ? t_rowNum : -1;
 }
-vector<AssignmentCpp> t_assres{};
+vector<AssignmentCpp> t_assres{}; //创造一个包含assignmentcpp类型的容器
 vector<AssignmentCpp> queryForAllAssignments() {
-    t_assres.clear();
+    t_assres.clear(); //清空容器
     sqlite3_exec(db, "SELECT * FROM users", [](void *foo, int columnNum, char **columnTexts, char **columnNames){
-        auto vec = vector<string>{columnTexts, columnTexts + columnNum};
+        auto vec = vector<string>{columnTexts, columnTexts + columnNum}; //就是说这个变量只在这个函数的域上才能使用
         t_assres.push_back(AssignmentCpp{stoi(vec[0]), vec[1], vec[2], vec[3]});
+        //尾部插入一个assignmentcpp新类，值分别是vec[0...3]
         return 0;
     }, NULL, NULL);
-    return t_assres;
+    return t_assres; // 返回assignmentcpp的容器
 }
 
 //vector<AssignmentCpp> t_assres{};
@@ -297,6 +295,7 @@ vector<AssignmentCpp> queryForAllNewNewAssignments() {
  */
 void insertNewAssignmentCpp(AssignmentCpp asscpp) {
     insertAssignment(asscpp.lecture.c_str(), asscpp.time.c_str(), asscpp.position.c_str());
+    //当运行时给予一个类assignmentcpp然后从我给予的类中去取得相应的值， 借助这个类我们联通了swift和这个c++文件
 }
 
 void insertCalendarInfoCpp(AssignmentCpp asscpp) {
@@ -316,7 +315,7 @@ void insertNewNewNewAssignmentCpp(AssignmentCpp asscpp) {
  delete assignment by pkid.
  */
 bool deleteAssignmentById(int pkid) {
-    ostringstream os;
+    ostringstream os; //从sstream库中衍生出来的, 只是为了更方便格式化字符串
     os << "DELETE FROM users WHERE id = " << pkid;
     return sqlite3_exec(db, os.str().c_str(), [](void *foo, int columnNum, char **columnTexts, char **columnNames){return 0;}, NULL, NULL) == SQLITE_OK;
 }

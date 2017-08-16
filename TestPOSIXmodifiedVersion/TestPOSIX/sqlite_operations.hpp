@@ -52,7 +52,7 @@ public:
     std::string position;
     
     AssignmentCpp(int pkid, std::string lecture, std::string time, std::string position);
-};
+}; //此处时类的定义部分
 extern std::vector<AssignmentCpp> queryForAllAssignments();
 extern std::vector<AssignmentCpp> queryForAllNewAssignments();
 extern std::vector<AssignmentCpp> queryForAllNewNewAssignments();
