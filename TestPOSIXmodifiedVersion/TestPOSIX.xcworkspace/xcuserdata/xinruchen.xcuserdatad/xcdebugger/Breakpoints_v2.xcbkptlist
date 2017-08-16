@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TestPOSIX/TableViewController.m"
+            timestampString = "517293423.392428"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
+            landmarkName = "-tableView:commitEditingStyle:forRowAtIndexPath:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TestPOSIX/MeetingsViewController.swift"
+            timestampString = "520615727.827804"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "14"
+            endingLineNumber = "14">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TestPOSIX.MeetingsViewController.__deallocating_deinit"
+                  moduleName = "TestPOSIX"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xinruchen/planner/TestPOSIXmodifiedVersion/TestPOSIX/MeetingsViewController.swift"
+                  timestampString = "520615727.885794"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TestPOSIX.MeetingsViewController.init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; TestPOSIX.MeetingsViewController"
+                  moduleName = "TestPOSIX"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xinruchen/planner/TestPOSIXmodifiedVersion/TestPOSIX/MeetingsViewController.swift"
+                  timestampString = "520615727.893889"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "70">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TestPOSIX.MeetingsViewController.__allocating_init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; TestPOSIX.MeetingsViewController"
+                  moduleName = "TestPOSIX"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xinruchen/planner/TestPOSIXmodifiedVersion/TestPOSIX/MeetingsViewController.swift"
+                  timestampString = "520615727.896124"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "23">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TestPOSIX.MeetingsViewController.__allocating_init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;TestPOSIX.MeetingsViewController&gt;"
+                  moduleName = "TestPOSIX"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xinruchen/planner/TestPOSIXmodifiedVersion/TestPOSIX/MeetingsViewController.swift"
+                  timestampString = "520615727.897854"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TestPOSIX.MeetingsViewController.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;TestPOSIX.MeetingsViewController&gt;"
+                  moduleName = "TestPOSIX"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xinruchen/planner/TestPOSIXmodifiedVersion/TestPOSIX/MeetingsViewController.swift"
+                  timestampString = "520615727.899463"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "28">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TestPOSIX/DeadlinesViewController.swift"
+            timestampString = "521363864.857309"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "9"
+            endingLineNumber = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TestPOSIX/DeadlinesViewController.swift"
+            timestampString = "521363864.857309"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "DeadlinesViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TestPOSIX.DeadlinesViewController.init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; TestPOSIX.DeadlinesViewController"
+                  moduleName = "TestPOSIX"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xinruchen/planner/TestPOSIXmodifiedVersion/TestPOSIX/DeadlinesViewController.swift"
+                  timestampString = "520617272.742304"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "70">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TestPOSIX.DeadlinesViewController.__allocating_init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; TestPOSIX.DeadlinesViewController"
+                  moduleName = "TestPOSIX"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xinruchen/planner/TestPOSIXmodifiedVersion/TestPOSIX/DeadlinesViewController.swift"
+                  timestampString = "520617272.745672"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "23">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TestPOSIX.DeadlinesViewController.__allocating_init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;TestPOSIX.DeadlinesViewController&gt;"
+                  moduleName = "TestPOSIX"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xinruchen/planner/TestPOSIXmodifiedVersion/TestPOSIX/DeadlinesViewController.swift"
+                  timestampString = "520617272.748882"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TestPOSIX.DeadlinesViewController.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;TestPOSIX.DeadlinesViewController&gt;"
+                  moduleName = "TestPOSIX"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xinruchen/planner/TestPOSIXmodifiedVersion/TestPOSIX/DeadlinesViewController.swift"
+                  timestampString = "520617272.752211"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "28">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TestPOSIX/sqlite_operations.cpp"
+            timestampString = "520813108.76769"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "155"
+            endingLineNumber = "155"
+            landmarkName = "insertAssignment(const char* lectures, const char* times, const char* positions)"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TestPOSIX/sqlite_operations.cpp"
+            timestampString = "520813108.76769"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "154"
+            endingLineNumber = "154"
+            landmarkName = "insertAssignment(const char* lectures, const char* times, const char* positions)"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TestPOSIX/DeadlinesViewController.swift"
+            timestampString = "521363914.506984"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TestPOSIX/AddDeadLineController.swift"
+            timestampString = "521863582.361809"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "addDeadLine(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

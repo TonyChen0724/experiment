@@ -1,0 +1,34 @@
+/**
+Cosc345 Asn 2, AssignmentObjc.hm
+Purpose: part of code that solve the IOS sandbox environment problem.
+@author Xinru Chen, Luke Falvey, Molly Patterson
+@version 1.0 5/29/17
+*/
+
+#ifndef AssignmentObjc_hm_h
+#define AssignmentObjc_hm_h
+
+//
+//  Assignment.h
+//  TestPOSIX
+//
+//  Created by Xinru Chen on 5/24/17.
+//  Copyright © 2017 Xinru Chen. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+
+@interface AssignmentObjc : NSObject
+
+@property (readonly) NSNumber *pkid;
+@property (readonly) NSString *lecture;
+@property (readonly) NSString *time;
+@property (readonly) NSString *position;
+
+- (instancetype)initWithPkid:(NSNumber *)pkid lecture:(NSString *)lecture time:(NSString *)time position:(NSString *)position;
+
++ (instancetype)assignmentObjcWithPkid:(NSNumber *)pkid lecture:(NSString *)lecture time:(NSString *)time position:(NSString *)position;
+
+@end
+
+#endif /* AssignmentObjc_hm_h */
