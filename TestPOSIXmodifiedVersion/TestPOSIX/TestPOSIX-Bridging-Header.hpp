@@ -25,7 +25,7 @@ AssignmentCpp assignmentCppFromAssignmentObjc(AssignmentObjc *assobjc);
 
 + (void)insertNewAssignmentCpp:(AssignmentCpp)asscpp;
 
-+ (void)insertNewAssignmentObjc:(AssignmentObjc *)assobjc;
++ (void)insertMeetingsObjc:(AssignmentObjc *)assobjc;
 
 + (void)insertNewNewAssignmentObjc:(AssignmentObjc *)assobjc;
 

@@ -52,8 +52,8 @@ using namespace std;
     insertNewAssignmentCpp(asscpp);
 }
 
-+ (void)insertNewNewAssignmentCpp:(AssignmentCpp)asscpp {
-    insertNewNewAssignmentCpp(asscpp);
++ (void)insertMeetingsCpp:(AssignmentCpp)asscpp {
+    insertMeetingsCpp(asscpp);
 }
 
 + (void)insertNewNewNewAssignmentCpp:(AssignmentCpp)asscpp {
@@ -64,9 +64,9 @@ using namespace std;
     [Bridging insertNewAssignmentCpp:assignmentCppFromAssignmentObjc(assobjc)];
 }
 
-+ (void)insertNewNewAssignmentObjc:(AssignmentObjc *)assobjc {
-    [Bridging insertNewNewAssignmentCpp:assignmentCppFromAssignmentObjc(assobjc)];
-}
++ (void)insertMeetingsObjc:(AssignmentObjc *)assobjc {
+    [Bridging insertMeetingsCpp:assignmentCppFromAssignmentObjc(assobjc)];
+} // changed to insert meetings object
 
 + (void)insertNewNewNewAssignmentObjc:(AssignmentObjc *)assobjc {
     [Bridging insertNewNewNewAssignmentCpp:assignmentCppFromAssignmentObjc(assobjc)];

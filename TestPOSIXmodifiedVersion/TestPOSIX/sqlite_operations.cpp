@@ -35,68 +35,6 @@ int callback(void *data, int argc, char **argv, char **azColName){
 }
 
 /*
- delete a record based on the times.
- */
-void deleter (char* times) {
-    string sqlhead = "DELETE FROM users;";
-    string topcomma = "'";
-    string semicolon = ";";
-    string sqlinfo = sqlhead + topcomma + times + topcomma + semicolon;
-    sql = sqlinfo.c_str();
-    printf("%s", sql);
-    rc = sqlite3_exec(db, sqlhead.c_str(), callback, 0, &zErrMsg);
-    // &zErrMsg is used to obtain any error the sqlite3 generated
-    if( rc != SQLITE_OK ){
-        fprintf(stderr, "SQL error: %s\n %d", zErrMsg, rc);
-        sqlite3_free(zErrMsg);
-    }else{
-        fprintf(stdout, "Records deleted successfully\n");
-    }
-    
-    
-}
-/*
- select a record based on the times.
- */
-void selectBytime(char* times) {
-    //    sql = "SELECT * from users";
-    string select = "SELECT lecture, time, position";
-    string from = " from users";
-    string whereif = " WHERE time = '";
-    string topcomma = "'";
-    string simicolon = ";";
-    string sqlinfo = select + from + whereif + times + topcomma + simicolon;
-    sql = &sqlinfo[0u];
-    rc = sqlite3_exec(db, sql, callback, 0, &zErrMsg);
-    if( rc != SQLITE_OK ){
-        fprintf(stderr, "SQL error: %s\n", zErrMsg);
-        sqlite3_free(zErrMsg);
-    }else{
-        fprintf(stdout, "Records selected successfully\n");
-    }
-    
-    
-    
-}
-
-/*
- view records from first to last.
- */
-void view () {
-    sql = "SELECT * from users";
-    
-    /* Execute SQL statement */
-    rc = sqlite3_exec(db, sql, callback, (void*)data, &zErrMsg);
-    if( rc != SQLITE_OK ){
-        fprintf(stderr, "SQL error: %s\n", zErrMsg);
-        sqlite3_free(zErrMsg);
-    }else{
-        fprintf(stdout, "Operation done successfully\n");
-    }
-    //    sqlite3_close(db);
-    
-}
-/*
  update a name of record based on the times.
  */
 void updateName(char* timer, char* name) {
@@ -151,20 +89,25 @@ void updatePosition(char* timer, char* positioner) {
  insert a record to the database.
  */
 void insertAssignment(const char* lectures, const char* times, const char* positions) {
-    string insertInto = "INSERT INTO users (lecture, time, position) VALUES ('";
-    string topcomma = "'";
-    string comma = ",";
-    string bracelet = "); ";
+//    string insertInto = "INSERT INTO users (lecture, time, position) VALUES ('";
+//    string topcomma = "'";
+//    string comma = ",";
+//    string bracelet = "); ";
+//    
+//    string sqlinfo = insertInto + lectures + topcomma + comma + topcomma + times + topcomma + comma + topcomma + positions + topcomma + bracelet;
+//    sql = &sqlinfo[0u];
+//    rc = sqlite3_exec(db, sql, callback, 0, &zErrMsg);
+//    if( rc != SQLITE_OK ){
+//        fprintf(stderr, "SQL error: %s\n", zErrMsg);
+//        sqlite3_free(zErrMsg);
+//    }else{
+//        fprintf(stdout, "Records created successfully\n");
+//    }
     
-    string sqlinfo = insertInto + lectures + topcomma + comma + topcomma + times + topcomma + comma + topcomma + positions + topcomma + bracelet;
-    sql = &sqlinfo[0u];
-    rc = sqlite3_exec(db, sql, callback, 0, &zErrMsg);
-    if( rc != SQLITE_OK ){
-        fprintf(stderr, "SQL error: %s\n", zErrMsg);
-        sqlite3_free(zErrMsg);
-    }else{
-        fprintf(stdout, "Records created successfully\n");
-    }
+    ostringstream os; //从sstream库中衍生出来的, 只是为了更方便格式化字符串
+    os << "INSERT INTO users (lecture, time, position) VALUES ('" << lectures << "','" << times << "','" << positions << "')";
+    sqlite3_exec(db, os.str().c_str(), [](void *foo, int columnNum, char **columnTexts, char **columnNames){return 0;}, NULL, NULL) == SQLITE_OK;
+
     
     
 }
@@ -190,41 +133,19 @@ void insertCalendarInfo(const char* classes, const char* starttimes, const char*
 }
 
 
-void insertAssignmenter(const char* lectures, const char* times, const char* positions) {
-    string insertInto = "INSERT INTO newuser (lecture, time, position) VALUES ('";
-    string topcomma = "'";
-    string comma = ",";
-    string bracelet = "); ";
-    
-    string sqlinfo = insertInto + lectures + topcomma + comma + topcomma + times + topcomma + comma + topcomma + positions + topcomma + bracelet;
-    sql = &sqlinfo[0u];
-    rc = sqlite3_exec(db, sql, callback, 0, &zErrMsg);
-    if( rc != SQLITE_OK ){
-        fprintf(stderr, "SQL error: %s\n", zErrMsg);
-        sqlite3_free(zErrMsg);
-    }else{
-        fprintf(stdout, "Records created successfully\n");
-    }
+void insertMeetings(const char* lectures, const char* times, const char* positions) {
+    ostringstream os;
+    os << "INSERT INTO newuser (lecture, time, position) VALUES ('" << lectures << "','" << times << "','" << positions << "')";
+    sqlite3_exec(db, os.str().c_str(), [](void *foo, int columnNum, char **columnTexts, char **columnNames){return 0;}, NULL, NULL);
     
     
 }
 
 
 void insertNewAssignmenter(const char* lectures, const char* times, const char* positions) {
-    string insertInto = "INSERT INTO thirduser (lecture, time, position) VALUES ('";
-    string topcomma = "'";
-    string comma = ",";
-    string bracelet = "); ";
-    
-    string sqlinfo = insertInto + lectures + topcomma + comma + topcomma + times + topcomma + comma + topcomma + positions + topcomma + bracelet;
-    sql = &sqlinfo[0u];
-    rc = sqlite3_exec(db, sql, callback, 0, &zErrMsg);
-    if( rc != SQLITE_OK ){
-        fprintf(stderr, "SQL error: %s\n", zErrMsg);
-        sqlite3_free(zErrMsg);
-    }else{
-        fprintf(stdout, "Records created successfully\n");
-    }
+    ostringstream os;
+    os << "INSERT INTO thirduser (lecture, time, position) VALUES ('" << lectures << "','" << times << "','" << positions << "')";
+    sqlite3_exec(db, os.str().c_str(), [](void *foo, int columnNum, char **columnTexts, char **columnNames){return 0;}, NULL, NULL);
     
     
 }
@@ -302,8 +223,8 @@ void insertCalendarInfoCpp(AssignmentCpp asscpp) {
     /*insertCalendarInfo(asscpp.classes.c_str(), <#const char *starttimes#>, <#const char *days#>, <#const char *weekly#>, <#const char *fortnightly#>, <#const char *location#>)*/
 }
 
-void insertNewNewAssignmentCpp(AssignmentCpp asscpp) {
-    insertAssignmenter(asscpp.lecture.c_str(), asscpp.time.c_str(), asscpp.position.c_str());
+void insertMeetingsCpp(AssignmentCpp asscpp) {
+    insertMeetings(asscpp.lecture.c_str(), asscpp.time.c_str(), asscpp.position.c_str());
 }
 
 void insertNewNewNewAssignmentCpp(AssignmentCpp asscpp) {

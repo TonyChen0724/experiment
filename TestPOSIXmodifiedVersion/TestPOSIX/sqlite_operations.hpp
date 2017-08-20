@@ -58,7 +58,7 @@ extern std::vector<AssignmentCpp> queryForAllNewAssignments();
 extern std::vector<AssignmentCpp> queryForAllNewNewAssignments();
 
 extern void insertNewAssignmentCpp(AssignmentCpp asscpp);
-extern void insertNewNewAssignmentCpp(AssignmentCpp asscpp);
+extern void insertMeetingsCpp(AssignmentCpp asscpp);
 extern void insertNewNewNewAssignmentCpp(AssignmentCpp asscpp);
 extern bool deleteAssignmentById(int pkid);
 extern bool deleteNewAssignmentById(int pkid);

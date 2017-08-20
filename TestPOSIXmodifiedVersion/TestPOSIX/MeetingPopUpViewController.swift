@@ -57,7 +57,7 @@ class MeetingPopUpViewController: UIViewController {
             
             groupText.text = ""
             timeAndDate.text = ""
-            Bridging.insertNewNewAssignmentObjc(ass);
+            Bridging.insertMeetingsObjc(ass);
             
             items[(week-2) + (clock-8) * 5] = "Meeting: " + groupText.text! + "\n" + timeAndDate.text! +
                 "\n" + locationText.text!

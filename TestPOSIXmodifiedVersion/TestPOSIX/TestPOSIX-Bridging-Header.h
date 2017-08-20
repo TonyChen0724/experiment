@@ -18,7 +18,7 @@
 
 + (void)insertNewAssignmentObjc:(AssignmentObjc *)assobjc;
 
-+ (void)insertNewNewAssignmentObjc:(AssignmentObjc *)assobjc;
++ (void)insertMeetingsObjc:(AssignmentObjc *)assobjc;
 
 + (void)insertNewNewNewAssignmentObjc:(AssignmentObjc *)assobjc;
 
